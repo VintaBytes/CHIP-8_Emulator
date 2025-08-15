@@ -124,7 +124,7 @@ Chip-8:   1  2  3  C        PC:   1  2  3  4
 
 ---
 
-## Cómo está implementado el bucle principal (a grandes razgos)
+## Cómo está implementado el bucle principal (a grandes rasgos)
 
 En cada iteración:
 
