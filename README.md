@@ -5,7 +5,7 @@ Un intérprete/mini-emulador de **CHIP-8** escrito en Python, con renderizado po
 
 ## Captura de pantalla
 
-<span><img src="https://github.com/VintaBytes/Lissajous/blob/main/imagen1.png?raw=true"  width="480px"/></span>
+<span><img src="https://github.com/VintaBytes/CHIP-8_Emulator/blob/main/captura.png"  width="480px"/></span>
 
 ## ¿Qué es CHIP-8?
 
