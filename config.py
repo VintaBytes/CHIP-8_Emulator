@@ -1,6 +1,8 @@
-# ----------------------------
-# CHIP-8 – Configuración
-# ----------------------------
+# -----------------------------------------------------------------------------
+# CHIP-8 – Archivo de Configuración
+# -----------------------------------------------------------------------------
+# ROM a cargar (implementar menu para seleccionar desde el HD)
+ROM_PATH = "./roms/2-ibm-logo1.ch8"
 
 # Pantalla
 SCREEN_W   = 64
@@ -12,7 +14,7 @@ WINDOW_TITLE = "Emulador CHIP-8"
 BG_COLOR   = (0, 0, 0)
 FG_COLOR   = (255, 255, 255)
 GRID_ON    = True
-GRID_COLOR = (96, 96, 96)
+GRID_COLOR = (0, 0, 0)
 
 # Memoria y layout
 MEM_SIZE       = 0x1000
@@ -63,5 +65,3 @@ FONT_SET = [
   0xF0, 0x80, 0xF0, 0x80, 0x80  # F
 ]
 
-# ROM a cargar (implementar menu para seleccionar desde el HD)
-ROM_PATH = "./roms/1-chip8-logo.ch8"
