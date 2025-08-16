@@ -1,9 +1,8 @@
 # -----------------------------------------------------------------------------
-# Importa la libreria e inicializa todos los módulos de Pygame 
-# (gráficos, sonido, etc.)
+# Importamos las librerias 
 # -----------------------------------------------------------------------------
 import pygame
-
+import config as cfg 
 
 # -----------------------------------------------------------------------------
 def process_input(events, KEY_MAPPINGS):
@@ -98,14 +97,14 @@ def draw_graphics(gfx, SCALE):
     # Horizontales (32 celdas ⇒ 33 líneas, incluyendo bordes)
     for y in range(33):
         pygame.draw.line(
-            pantalla, color_grid,
+            pantalla, cfg.GRID_COLOR,
             (0, y * SCALE), (64 * SCALE, y * SCALE), 1
         )
 
     # Verticales (64 celdas ⇒ 65 líneas, incluyendo bordes)
     for x in range(65):
         pygame.draw.line(
-            pantalla, color_grid,
+            pantalla, cfg.GRID_COLOR,
             (x * SCALE, 0), (x * SCALE, 32 * SCALE), 1
         )
 
