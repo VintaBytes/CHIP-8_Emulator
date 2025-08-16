@@ -1,10 +1,8 @@
-
+# -----------------------------------------------------------------------------
+# Importamos las librerias 
+# -----------------------------------------------------------------------------
 import random
-
-# Resolver: debe importarse de config.py
-QUIRK_SHIFT_USES_VY = False
-
-
+import config as cfg 
 
 # -----------------------------------------------------------------------------
 def op_00E0(gfx):
@@ -155,7 +153,7 @@ def op_8XY5(v_reg, x, y):
     return v_reg
 
 # -----------------------------------------------------------------------------
-def op_8XY6(v_reg, x, y, quirk=QUIRK_SHIFT_USES_VY):
+def op_8XY6(v_reg, x, y, quirk=cfg.QUIRK_SHIFT_USES_VY):
     """SHR Vx >> 1"""
     if quirk:
         v_reg[0xF] = v_reg[y] & 0x1
@@ -170,11 +168,11 @@ def op_8XY7(v_reg, x, y):
     """SUBN Vx, Vy (Vx = Vy - Vx) con borrow"""
     # 8XY7: Vx = Vy - Vx ; VF = 1 si Vy >= Vx, si no 0
     v_reg[0xF] = 1 if v_reg[y] >= v_reg[x] else 0
-    v_reg[x] = (v_reg[y] - v_reg[x]) & 0xFF
+    v_reg[x] = (v_reg[y] - v_reg[x]) & 0xFF# 
     return v_reg
 
 # -----------------------------------------------------------------------------
-def op_8XYE(v_reg, x, y, quirk=QUIRK_SHIFT_USES_VY):
+def op_8XYE(v_reg, x, y, quirk=cfg.QUIRK_SHIFT_USES_VY):
     if quirk:
         v_reg[0xF] = (v_reg[y] & 0x80) >> 7
         v_reg[x]   = (v_reg[y] << 1) & 0xFF
