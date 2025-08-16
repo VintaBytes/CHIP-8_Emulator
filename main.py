@@ -7,6 +7,7 @@
 #   Opcodes..........: https://chip8.gulrak.net/
 #   Roms de prueba...: https://github.com/Timendus/chip8-test-suite?tab=readme-ov-file
 # -----------------------------------------------------------------------------
+
 # -----------------------------------------------------------------------------
 # Importa la libreria e inicializa todos los módulos de Pygame 
 # (gráficos, sonido, etc.)
